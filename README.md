@@ -39,7 +39,7 @@ Here's a brief explanation of the Dockerfile:
 - **Set Working Directory**
 
   ```dockerfile
-  WORKDIR lastName_firstName_final_site
+  WORKDIR patel_deep_final_site
   ```
 
   Set the working directory inside the container.
