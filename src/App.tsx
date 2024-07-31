@@ -1,6 +1,9 @@
 // src/App.js
 import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
+import DeveloperSetup from "./DeveloperSetup";
+
 import { DiReact, DiRuby, DiPython } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
@@ -10,10 +13,29 @@ import { BiLogoTailwindCss } from "react-icons/bi";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Deep Patel</h1>
-      </header>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Deep Patel</h1>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/about-me">About Me</Link>
+            <Link to="/developer-setup">Developer Setup</Link>
+          </nav>
+        </header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/developer-setup" element={<DeveloperSetup />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
+    <div>
       <section className="basic-information">
         <h2>Basic Information</h2>
         <p>
@@ -169,16 +191,20 @@ function App() {
           <a href="https://tailwindcss.com/">Link</a>
         </div>
       </section>
-      <section className="developer-setup">
-        <h2>Developer Setup</h2>
-        <div>
-          <h3>VSCode Setup</h3>
-          <p>I have a basic VSCode setup.</p>
-          <h3>Terminal Setup</h3>
-          <p>I don't have anything set up; I use the default command prompt.</p>
-          <h3>Preferred Editor Font</h3>
-          <p>I have not changed my font; it is the default.</p>
-        </div>
+    </div>
+  );
+}
+
+function AboutMe() {
+  return (
+    <div>
+      <section className="about-me">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm Deep Patel, a passionate developer with experience in React,
+          Ruby on Rails, Python, and more. I enjoy creating impactful web
+          applications and continuously learning new technologies.
+        </p>
       </section>
     </div>
   );
