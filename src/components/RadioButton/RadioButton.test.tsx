@@ -16,7 +16,7 @@ test("RadioButton is disabled when the disabled prop is true", () => {
 });
 
 test("RadioButton is enabled and changes color to green when the disabled prop is false", () => {
-  render(<RadioButton disabled={false}  />);
+  render(<RadioButton disabled={false} />);
   const radioElement = screen.getByRole("radio");
   expect(radioElement).not.toBeDisabled();
   expect(radioElement).toHaveStyle("cursor: pointer");

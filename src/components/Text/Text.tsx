@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+
 
 interface TextProps {
   disabled?: boolean;
@@ -10,7 +10,6 @@ interface TextProps {
 const StyledText = styled.h1<TextProps>`
   background-color: black;
   color: white;
- 
 
   &:hover {
     background-color: ${(props) => (props.disabled ? "grey" : "blue")};

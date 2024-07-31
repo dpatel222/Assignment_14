@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { RadioButtonProps } from "./RadioButton.types";
 
-
 const StyledLabel = styled.label<RadioButtonProps>`
   display: inline-flex;
   align-items: center;

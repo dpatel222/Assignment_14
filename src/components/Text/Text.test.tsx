@@ -6,7 +6,7 @@ import Text from "./Text";
 test("Text is disabled when the disabled prop is true", () => {
   render(<Text disabled={true}>This is an h1 tag for the text component</Text>);
   const textElement = screen.getByText(
-    "This is an h1 tag for the text component"
+    "This is an h1 tag for the text component",
   );
 
   fireEvent.mouseOver(textElement);
@@ -16,10 +16,10 @@ test("Text is disabled when the disabled prop is true", () => {
 
 test("Text is enabled and changes color to darkgrey when the disabled prop is false", () => {
   render(
-    <Text disabled={false}>This is an h1 tag for the text component</Text>
+    <Text disabled={false}>This is an h1 tag for the text component</Text>,
   );
   const textElement = screen.getByText(
-    "This is an h1 tag for the text component"
+    "This is an h1 tag for the text component",
   );
 
   fireEvent.mouseOver(textElement);
@@ -30,7 +30,7 @@ test("Text is enabled and changes color to darkgrey when the disabled prop is fa
 test("Text is visible", () => {
   render(<Text>This is an h1 tag for the text component</Text>);
   const textElement = screen.getByText(
-    "This is an h1 tag for the text component"
+    "This is an h1 tag for the text component",
   );
   expect(textElement).toBeVisible();
 });
