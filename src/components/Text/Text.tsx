@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 interface TextProps {
   disabled?: boolean;
   children: React.ReactNode;
